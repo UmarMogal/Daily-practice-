@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Day 14 - JavaScript Events</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        button,
+        input,
+        select {
+            margin: 8px 0;
+            padding: 6px;
+        }
+
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            line-height: 100px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>JavaScript Events Example</h2>
+
+    <!-- onclick -->
+    <button onclick="showAlert()">Click Me</button>
+
+    <br><br>
+
+    <!-- oninput -->
+    <input type="text" placeholder="Type here" oninput="showText(this.value)">
+    <p id="output"></p>
+
+    <br>
+
+    <!-- onchange -->
+    <select onchange="showCourse(this.value)">
+        <option value="">Select Course</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+    </select>
+    <p id="course"></p>
+
+    <br>
+
+    <!-- onmouseover -->
+    <div id="box" onmouseover="mouseOver()" onmouseout="mouseOut()">
+        Hover Me
+    </div>
+
+    <br><br>
+
+    <!-- onkeydown -->
+    <input type="text" placeholder="Press any key" onkeydown="keyPress()">
+
+    <br><br>
+
+    <!-- addEventListener -->
+    <button id="eventBtn">Event Listener Button</button>
+
+    <script>
+        function showAlert() {
+            alert("onclick event triggered");
+        }
+
+        function showText(value) {
+            document.getElementById("output").innerText = value;
+        }
+
+        function showCourse(value) {
+            document.getElementById("course").innerText =
+                "Selected Course: " + value;
+        }
+
+        function mouseOver() {
+            document.getElementById("box").style.backgroundColor = "orange";
+        }
+
+        function mouseOut() {
+            document.getElementById("box").style.backgroundColor = "lightgray";
+        }
+
+        function keyPress() {
+            console.log("Key pressed");
+        }
+
+        document.getElementById("eventBtn").addEventListener("click", function () {
+            alert("addEventListener event triggered");
+        });
+    </script>
+
+</body>
+
+</html>

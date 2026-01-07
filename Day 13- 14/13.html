@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 13 - DOM Manipulation</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+    }
+  </style>
+</head>
+<body>
+
+<h2 id="heading">DOM Manipulation Example</h2>
+
+<p id="para">This paragraph will change using DOM.</p>
+
+<img id="img" src="html.jpg">
+
+<br><br>
+
+<button onclick="changeText()">Change Text</button>
+<button onclick="changeStyle()">Change Style</button>
+<button onclick="changeImage()">Change Image</button>
+<button onclick="addItem()">Add List Item</button>
+<button onclick="removeItem()">Remove List Item</button>
+
+<ul id="list"></ul>
+
+<script>
+function changeText() {
+  document.getElementById("heading").innerText = "Text Changed Using DOM";
+}
+
+function changeStyle() {
+  let p = document.getElementById("para");
+  p.style.color = "blue";
+  p.style.fontSize = "18px";
+}
+
+function changeImage() {
+  document.getElementById("img").src = "js.jpg";
+}
+
+function addItem() {
+  let li = document.createElement("li");
+  li.innerText = "New Item Added";
+  document.getElementById("list").appendChild(li);
+}
+
+function removeItem() {
+  let list = document.getElementById("list");
+  if (list.lastChild) {
+    list.removeChild(list.lastChild);
+  }
+}
+</script>
+
+</body>
+</html>
