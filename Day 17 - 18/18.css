@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Header */
+.header {
+  background: #111827;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Menu Icon (Hidden on Desktop) */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Hide Checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* ===================== */
+/* Mobile Responsive */
+/* ===================== */
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #1f2933;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .navbar a {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  /* Show menu when checkbox checked */
+  #menu-toggle:checked + .menu-icon + .navbar {
+    display: flex;
+  }
+}

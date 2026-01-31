@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio Website showcasing my projects and skills.">
+    <title>My Portfolio</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="#hero" class="logo">PortFolio.</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <span>Let's Talk</span>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <span class="greeting">Hello, I'm</span>
+                <h1 class="hero-title">A Creative <span class="highlight">Developer</span><br> Building Things for the
+                    Web.</h1>
+                <p class="hero-subtitle">I design and build beautiful websites and applications with a focus on user
+                    experience and simplicity.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <!-- Placeholder for user image -->
+                        <div class="img-placeholder"></div>
+                    </div>
+                    <div class="about-text">
+                        <p>I am a passionate web developer with a keen eye for design. I love solving problems and
+                            creating efficient, scalable code. My journey started with...</p>
+                        <p>When I'm not coding, you can find me...</p>
+
+                        <div class="skills">
+                            <h3>Skills</h3>
+                            <div class="skill-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Responsive Design</span>
+                                <span>Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <h2 class="section-title">Recent Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <article class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <h3 class="project-title">Project One</h3>
+                            <p class="project-desc">A brief description of the project goes here. What technologies were
+                                used and what problem did it solve?</p>
+                            <a href="#" class="link-arrow">View Case Study &rarr;</a>
+                        </div>
+                    </article>
+                    <!-- Project Card 2 -->
+                    <article class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <h3 class="project-title">Project Two</h3>
+                            <p class="project-desc">A brief description of the project goes here. What technologies were
+                                used and what problem did it solve?</p>
+                            <a href="#" class="link-arrow">View Case Study &rarr;</a>
+                        </div>
+                    </article>
+                    <!-- Project Card 3 -->
+                    <article class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <h3 class="project-title">Project Three</h3>
+                            <p class="project-desc">A brief description of the project goes here. What technologies were
+                                used and what problem did it solve?</p>
+                            <a href="#" class="link-arrow">View Case Study &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container contact-container">
+                <div class="contact-text">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p>Have a project in mind or just want to say hi? Feel free to send me a message!</p>
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> contact@example.com</p>
+                        <p><strong>Phone:</strong> +123 456 7890</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Portfolio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Github</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const nav = document.querySelector('.nav');
+
+            mobileBtn.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                mobileBtn.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    mobileBtn.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

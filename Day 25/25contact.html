@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Nova Digital</title>
+  <link rel="stylesheet" href="25.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h2>Nova<span>Digital</span></h2>
+  <nav>
+    <a href="25.html">Home</a>
+    <a href="25about.html">About</a>
+    <a href="25services.html">Services</a>
+    <a href="25contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<section class="page">
+  <h1>Contact Us</h1>
+
+  <!-- ✅ ID added here -->
+  <form id="contactForm" onsubmit="return sent()">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Nova Digital Agency</p>
+</footer>
+
+<script src="25.js"></script>
+</body>
+</html>
